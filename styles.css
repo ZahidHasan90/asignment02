@@ -1,6 +1,12 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
     background-color: #000;
     color: #fff;
 }
@@ -8,7 +14,6 @@ body {
 .header {
     background-color: #111;
     padding: 20px;
-    position: relative;
 }
 
 .navbar {
@@ -20,7 +25,7 @@ body {
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #FF6347;
+    color: #E6533C;
 }
 
 .navbar .nav-links {
@@ -37,11 +42,15 @@ body {
     text-decoration: none;
 }
 
+/* Hero Section */
 .hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
+    flex-wrap: wrap;
+    width: 1440px;
+    height: 715px;
 }
 
 .hero-content h1 {
@@ -49,12 +58,19 @@ body {
     line-height: 1.2;
 }
 
-.hero-content h1 span {
+.hero-content h1  {
     font-family: 'Cursive', sans-serif;
     font-size: 56px;
 }
 
+.hero-content span {
+    font-size: 78;
+
+    
+}
+
 .hero-content p {
+    color: #666;
     margin: 20px 0;
     font-size: 16px;
     max-width: 400px;
@@ -79,17 +95,11 @@ body {
 }
 
 .hero-image {
-    position: relative;
-}
-
-.hero-image img {
-    max-width: 400px;
+    max-width: 100%;
+    margin-top: 20px;
 }
 
 .stats {
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
 }
@@ -106,7 +116,10 @@ body {
     font-weight: bold;
 }
 
+/* Habits Section */
 .habits-section {
+    width: 1044px;
+    height: 452px;
     text-align: center;
     padding: 40px 20px;
     background-color: #222;
@@ -120,10 +133,16 @@ body {
 .habits-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
+.habits-container .p{
+    color: #666;
+}
+
 
 .habit {
     text-align: center;
+    max-width: 200px;
 }
 
 .habit img {
@@ -133,16 +152,23 @@ body {
     margin-bottom: 10px;
 }
 
+/* Extra Mile Section */
 .extra-mile-section {
     display: flex;
     padding: 40px 20px;
     background-color: #333;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
-
+.extra-mile-section {
+    width: 1060px;
+    height: 371px;  
+}
 .extra-mile-section .content {
     max-width: 50%;
+    width: 443px;
+    height: 290px;
 }
 
 .extra-mile-section .content h2 {
@@ -151,20 +177,21 @@ body {
 }
 
 .extra-mile-section .content p {
+    color: #666;
     font-size: 16px;
     margin-bottom: 20px;
 }
 
 .extra-mile-section .image img {
-    max-width: 300px;
+    width: 366px;
+    height: 312px;
+    border-radius: 10px;
 }
 
-
-
-
-
-
+/* Trainings and Exercises Section */
 .trainings-exercises {
+    width: 1060px;
+    height: 581px;
     text-align: center;
     padding: 40px 20px;
     background-color: #111;
@@ -177,6 +204,7 @@ body {
 }
 
 .trainings-exercises p {
+    color: #666;
     font-size: 16px;
     margin-bottom: 20px;
     color: #aaa;
@@ -211,6 +239,7 @@ body {
     border-radius: 5px;
 }
 
+/* BMI Calculator Section */
 .bmi-calculator {
     padding: 40px 20px;
     background-color: #222;
@@ -224,6 +253,7 @@ body {
 }
 
 .bmi-calculator p {
+    color: #666;
     font-size: 16px;
     margin-bottom: 20px;
     color: #aaa;
@@ -236,8 +266,7 @@ body {
     gap: 20px;
 }
 
-.bmi-chart,
-.bmi-form {
+.bmi-chart, .bmi-form {
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
@@ -246,8 +275,7 @@ body {
     color: #fff;
 }
 
-.bmi-chart h3,
-.bmi-form h3 {
+.bmi-chart h3, .bmi-form h3 {
     font-size: 20px;
     margin-bottom: 20px;
 }
@@ -258,8 +286,7 @@ body {
     margin-top: 10px;
 }
 
-.bmi-chart table th,
-.bmi-chart table td {
+.bmi-chart table th, .bmi-chart table td {
     padding: 10px;
     border: 1px solid #444;
     text-align: left;
@@ -271,8 +298,7 @@ body {
     gap: 15px;
 }
 
-.bmi-form form input,
-.bmi-form form select {
+.bmi-form form input, .bmi-form form select {
     padding: 10px;
     background-color: #444;
     border: none;
@@ -295,18 +321,14 @@ body {
     background-color: #ff4500;
 }
 
-
-
-
-
-
-
-
-
+/* Team Section */
 .team-section {
+    width: 1060px;
+    height: 782px;
     text-align: center;
     padding: 40px 20px;
     background-color: #222;
+   
 }
 
 .team-section h2 {
@@ -315,15 +337,17 @@ body {
 }
 
 .team-section p {
+    color: #666;
     font-size: 16px;
     margin-bottom: 20px;
     color: #aaa;
 }
 
 .team-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    width: 1060px;
+    height: 604px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -331,8 +355,8 @@ body {
     background-color: #333;
     border-radius: 10px;
     overflow: hidden;
-    width: 30%;
-    max-width: 200px;
+    width: 100%;
+    max-width: 500px;
     text-align: center;
     padding: 15px;
 }
@@ -340,6 +364,7 @@ body {
 .team-member img {
     width: 100%;
     border-radius: 10px;
+    
 }
 
 .team-member h3 {
@@ -352,6 +377,7 @@ body {
     font-size: 14px;
 }
 
+/* Footer Section */
 .footer {
     background-color: #111;
     padding: 40px 20px;
@@ -413,4 +439,66 @@ body {
     margin-top: 20px;
     font-size: 14px;
     color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .extra-mile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .extra-mile-section .content, .extra-mile-section .image {
+        max-width: 100%;
+    }
+
+    .exercise-item {
+        width: 48%;
+    }
+
+    .bmi-container {
+        flex-direction: column;
+    }
+
+    .team-container {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 80%;
+        max-width: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .exercise-item {
+        width: 100%;
+    }
+
+    .bmi-chart, .bmi-form {
+        min-width: 100%;
+    }
 }
