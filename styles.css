@@ -6,6 +6,10 @@
     font-weight: 400;
     font-style: normal;
   }
+  @import url("https://fonts.cdnfonts.com/css/miama");
+  @font-face{font-family:miama;font-style:italic;font-weight:400;src:local('Miama'),url(https://fonts.cdnfonts.com/s/302/Miama-Regular.woff) format('woff')}@font-face{font-family:miama;font-style:normal;font-weight:300;src:local('Miama'),url(https://fonts.cdnfonts.com/s/302/Miama.woff) format('woff')}
+
+
 body {
     background-color: #000;
     color: #fff;
@@ -20,15 +24,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1060px;
+    height: 46px;
+   
 }
 
 .navbar .logo {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     color: #E6533C;
+    font-style: italic;
+  
+   
 }
-
-.navbar .nav-links {
+.nav-links {
     list-style-type: none;
     display: flex;
 }
@@ -45,14 +54,20 @@ body {
 /* Hero Section */
 .hero-section {
     display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
+    margin: 0 auto;
     flex-wrap: wrap;
     width: 1440px;
     height: 715px;
 }
 
+.hero-content  {
+    width: 599.5px;
+    height: 440px;
+    margin: 0 auto;
+
+}
 .hero-content h1 {
     font-size: 48px;
     line-height: 1.2;
@@ -64,7 +79,9 @@ body {
 }
 
 .hero-content span {
-    font-size: 78;
+    font-size: 78px;
+    font-family: Miama;
+    
 
     
 }
@@ -95,26 +112,36 @@ body {
 }
 
 .hero-image {
-    max-width: 100%;
-    margin-top: 20px;
+    width: 350px;
+    height: 580px;
+  
 }
 
 .stats {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+
 }
 
 .stat {
-    background-color: #FF6347;
+    height: 98px;
+    width: 193px;
     padding: 10px;
     margin-bottom: 10px;
     text-align: center;
+  border: #666;
+    backdrop-filter: blur(10px);
 }
 
 .stat span {
     font-size: 24px;
     font-weight: bold;
 }
+  
+main > section{
+    margin-top: 88px;
+}
+
 
 /* Habits Section */
 .habits-section {
@@ -122,7 +149,9 @@ body {
     height: 452px;
     text-align: center;
     padding: 40px 20px;
-    background-color: #222;
+    background-color: #000;
+    margin: 0 auto;
+    padding: 5.5em;
 }
 
 .habits-section h2 {
@@ -162,8 +191,9 @@ body {
     flex-wrap: wrap;
 }
 .extra-mile-section {
-    width: 1060px;
-    height: 371px;  
+    max-width: 1060px;
+    margin: 0 auto;
+
 }
 .extra-mile-section .content {
     max-width: 50%;
@@ -190,11 +220,10 @@ body {
 
 /* Trainings and Exercises Section */
 .trainings-exercises {
-    width: 1060px;
-    height: 581px;
-    text-align: center;
+    max-width: 1060px;
     padding: 40px 20px;
     background-color: #111;
+    margin: 0 auto;
 }
 
 .trainings-exercises h2 {
@@ -204,39 +233,36 @@ body {
 }
 
 .trainings-exercises p {
-    color: #666;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 20px;
     color: #aaa;
 }
 
-.exercise-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
+.exercise-grid1 {
+    display: grid;
+    grid-template-columns: 250px 520px 1fr;
+    width: 1060px;
+    height: 201.5px;
+    background-color: ;
+  
 }
-
+.exercise-grid2{
+    display: grid;
+    grid-template-columns: 425px 288px 347px;
+    width: 1060px;
+    height: 201.5px;
+}
 .exercise-item {
     background-size: cover;
     background-position: center;
-    width: 32%;
-    height: 200px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
 }
+
 
 .exercise-item h3 {
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
+  
+   
+ 
 }
 
 /* BMI Calculator Section */
@@ -244,6 +270,8 @@ body {
     padding: 40px 20px;
     background-color: #222;
     text-align: center;
+  
+
 }
 
 .bmi-calculator h2 {
@@ -264,6 +292,8 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+    width: 1440px;
+    height: 487px;
 }
 
 .bmi-chart, .bmi-form {
@@ -327,8 +357,8 @@ body {
     height: 782px;
     text-align: center;
     padding: 40px 20px;
-    background-color: #222;
-   
+    background-color: #000;
+   margin: 0 auto;
 }
 
 .team-section h2 {
@@ -341,13 +371,15 @@ body {
     font-size: 16px;
     margin-bottom: 20px;
     color: #aaa;
+
 }
 
 .team-container {
     width: 1060px;
     height: 604px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:326.67px 326.67px 326.67px;
+    grid-template-rows: 272px 272px 272px;
     gap: 20px;
 }
 
