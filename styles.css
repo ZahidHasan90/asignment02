@@ -26,6 +26,7 @@ body {
     align-items: center;
     width: 1060px;
     height: 46px;
+    margin: 0 auto;
    
 }
 
@@ -34,8 +35,14 @@ body {
     font-weight: bold;
     color: #E6533C;
     font-style: italic;
-  
-   
+}
+.navbar  .nav-links .home{
+    background-color:#E6533C;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 60px;
+    margin-right: 10px;
 }
 .nav-links {
     list-style-type: none;
@@ -102,7 +109,7 @@ body {
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 60px;
     margin-right: 10px;
 }
 
@@ -120,7 +127,7 @@ body {
 .stats {
     display: flex;
     flex-direction: row-reverse;
-
+   
 }
 
 .stat {
@@ -193,6 +200,7 @@ main > section{
 .extra-mile-section {
     max-width: 1060px;
     margin: 0 auto;
+    border-radius: 10px;
 
 }
 .extra-mile-section .content {
@@ -270,6 +278,7 @@ main > section{
     padding: 40px 20px;
     background-color: #222;
     text-align: center;
+   
   
 
 }
@@ -294,6 +303,7 @@ main > section{
     gap: 20px;
     width: 1440px;
     height: 487px;
+    margin: 0 auto;
 }
 
 .bmi-chart, .bmi-form {
@@ -386,7 +396,7 @@ main > section{
 .team-member {
     background-color: #333;
     border-radius: 10px;
-    overflow: hidden;
+overflow: hidden;
     width: 100%;
     max-width: 500px;
     text-align: center;
@@ -474,7 +484,7 @@ main > section{
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 993px) {
     .navbar .nav-links {
         flex-direction: column;
         gap: 10px;
