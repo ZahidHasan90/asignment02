@@ -127,20 +127,37 @@ body {
 .stats {
     display: flex;
     flex-direction: row-reverse;
-   
+    position: relative;
 }
 
 .stat {
-    height: 98px;
-    width: 193px;
+    height: 80px;
+    width: 180px;
     padding: 10px;
     margin-bottom: 10px;
     text-align: center;
-  border: #666;
-    backdrop-filter: blur(10px);
+background-color: #666;
+  transform: translate(70px, -450px);
+  backdrop-filter: blur(10px);   
+    
+}
+.stat1{
+    height: 60px;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #666;
+    
+  transform: translate(-370px, -200px);
+    
 }
 
 .stat span {
+    font-size: 40px;
+    font-weight: bold;
+}
+.stat1 span {
     font-size: 24px;
     font-weight: bold;
 }
@@ -251,7 +268,7 @@ main > section{
     grid-template-columns: 250px 520px 1fr;
     width: 1060px;
     height: 201.5px;
-    background-color: ;
+    
   
 }
 .exercise-grid2{
@@ -263,6 +280,7 @@ main > section{
 .exercise-item {
     background-size: cover;
     background-position: center;
+   
 }
 
 
@@ -484,40 +502,43 @@ overflow: hidden;
 }
 
 /* Responsive Design */
-@media (max-width: 993px) {
-    .navbar .nav-links {
-        flex-direction: column;
-        gap: 10px;
+@media (max-width: 1200px) {
+    .navbar {
+        width: 100%;
     }
 
-    .hero-content h1 {
-        font-size: 36px;
-    }
-
-    .extra-mile-section {
+    .hero-section {
         flex-direction: column;
         text-align: center;
     }
 
-    .extra-mile-section .content, .extra-mile-section .image {
-        max-width: 100%;
+    .hero-content {
+        width: 100%;
+        margin: 20px 0;
     }
 
-    .exercise-item {
-        width: 48%;
+    .hero-image {
+        width: 100%;
+        height: auto;
     }
 
-    .bmi-container {
+    .extra-mile-section {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .extra-mile-section .content,
+    .extra-mile-section .image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .exercise-grid1, .exercise-grid2 {
+        grid-template-columns: 1fr;
     }
 
     .team-container {
-        flex-direction: column;
-    }
-
-    .team-member {
-        width: 80%;
-        max-width: none;
+        grid-template-columns: 1fr;
     }
 
     .footer-content {
@@ -525,22 +546,86 @@ overflow: hidden;
         text-align: center;
     }
 
+    .footer-logo,
     .footer-links {
         max-width: 100%;
-        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content span {
+        font-size: 48px;
+    }
+
+    .extra-mile-section .content h2,
+    .extra-mile-section .content p,
+    .trainings-exercises h2,
+    .trainings-exercises p,
+    .bmi-calculator h2,
+    .team-section h2,
+    .team-section p {
+        font-size: 24px;
+    }
+
+    .bmi-container {
+        flex-direction: column;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 24px;
+    }
+
     .hero-content h1 {
         font-size: 28px;
     }
 
-    .exercise-item {
-        width: 100%;
+    .hero-content span {
+        font-size: 36px;
     }
 
-    .bmi-chart, .bmi-form {
-        min-width: 100%;
+    .btn-primary, .btn-secondary {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .habits-section,
+    .extra-mile-section,
+    .trainings-exercises,
+    .bmi-calculator,
+    .team-section {
+        padding: 20px;
+    }
+
+    .exercise-grid1, .exercise-grid2 {
+        grid-template-columns: 1fr;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        padding: 20px;
     }
 }
+
